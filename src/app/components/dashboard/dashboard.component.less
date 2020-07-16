@@ -1,0 +1,132 @@
+@primaryColor: #007bff;
+@darkColor: #343a40;
+
+
+@whiteColor: #d7e6e4;
+@blueColor: #439093;
+@textColor: #a28089;
+
+@lightColor: #f8f9fa;
+
+
+// Made iPad 
+@iPad: ~"(min-width: 1024px)";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.main-content {
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media @iPad {
+    .row {
+        .main-block {
+            height: 50vh;
+        }
+    }
+}
+
+.row {
+    color: black;
+    margin: 0;
+
+    .main-block {
+        
+        position: relative;
+        height: 70vh;
+        background: @whiteColor;
+        transform: skewY(8deg);
+        transform-origin: 100%;
+
+        *{
+            margin-top: 10%;
+
+            .text-content{ 
+                transform: skewY(-8deg);
+
+                hr{ 
+                    margin-top: 50px;
+                }
+                p{
+                    margin-top: 80px;
+                    font-size: 24px;
+                }
+            }
+            
+        }
+        
+    }
+
+    .child-block {
+        height: 80px;
+        transform: skewY(8deg);
+        transform-origin: 100%;
+        position: relative;
+        
+        .container {
+            transform: skewY(-8deg);
+
+            .text-content {
+                font-size: 18px;
+            }
+
+            .articles-card {
+                width: 400px;
+            }
+        }
+        
+    }
+}
+
+.details-content {
+    width: 100%;
+    min-height: 40vh;
+    position: relative;
+    overflow: hidden;
+
+    .transformed-block {
+        display: inline-block;
+        position: relative;
+        background: @whiteColor;
+        padding: 15px 0;
+        width: 100%;
+        height: 60%;
+        text-align: center;
+    }
+    .transformed-block:after {
+        content: '';
+        display: block;  
+        position: absolute;
+        left: 0%;
+        top: 100%;
+        width: 0;
+        height: 0;
+        border-top: 100px solid @whiteColor;;
+        border-right: 50vw solid transparent;
+        border-bottom: 0 solid transparent;
+        border-left: 50vw solid transparent;
+    }
+}
+
+.card {
+    z-index: 10;
+    transition: .5s all;
+}
+
+.card-link:hover {
+    cursor: pointer;
+    transition: .5s all;
+    transform: translateY(-5px);
+    box-shadow: 0px 18px 39px 0px rgba(0, 0, 0, 0.582);
+    transform: scaleT(5px);
+}
+
