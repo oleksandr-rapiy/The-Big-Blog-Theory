@@ -127,8 +127,13 @@
               "devServerTarget": "the-big-blog-theory:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "the-big-blog-theory"
 }

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-        <a [routerLink]="['/']" class="navbar-brand">TheBigBlogTheory</a>
+        <a [routerLink]="['/']" class="navbar-brand">The<span class="custom-color">Big</span>Blog<span class="custom-color">Theory</span> </a>
         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,7 @@
         <div id="my-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav  ml-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" [routerLink]="['/articles']">Articles</a>
+                    <a class="nav-link" [routerLink]="['/articles']"  routerLinkActive="router-link-active"  >Articles</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Patreon</a>

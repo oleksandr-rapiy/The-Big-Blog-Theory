@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "thebigblogtheory-ef3ab": {
+      "hosting": {
+        "the-big-blog-theory": [
+          "thebigblogtheory-ef3ab"
+        ]
+      }
+    }
+  }
+}
