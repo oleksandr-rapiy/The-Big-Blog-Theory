@@ -5,9 +5,9 @@
                 <div class="text-content">
                     <h1 class="display-4">The Big Blog Theory</h1>
                     <p class="text-right">
-                        What a hell are we fucking doing in this fucking world ? <br>
-                        Or maybe we should die ? <br>
-                        Or no ?
+                        Hi? What's up ? <br>
+                        Thanks for visiting this simple blog <br>
+                        Hope you will like it.
                     </p>
                 </div>
             </div>
@@ -21,22 +21,24 @@
                     <hr>
                     <div class="text-content">
                         <p class="">
-                            Science, Philosophy, Astronomy or whatever what I interesting. I still not sure why I'm here
-                            (I
-                            mean...world), because of someone or something ? Are you still here maybe you are interested
-                            here ? Just visit Post maybe you'll find in interesting stuff about my thoughts ?
+                            Science, Philosophy, Astronomy or whatever what I interesting. Are you still here maybe you
+                            are interested
+                            here ? Just visit <a [routerLink]="['/articles']">Articles</a> maybe you'll find in
+                            interesting stuff about my thoughts ?
                         </p>
                     </div>
                 </div>
             </div>
-            <div [routerLink]="['/articles']" class="col mb-4 mx-auto">
-                <div class="card articles-card card-link">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">{{ article.title }}</h5>
-                        <p class="card-text">{{ article.body }}</p>
+            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Visit more articles">
+                <div [routerLink]="['/articles']"  class="col mb-4 mx-auto">
+                    <div class="card articles-card card-link">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                            <p class="card-text">{{ article.body }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </span>
         </div>
     </div>
 </div>
@@ -48,7 +50,7 @@
                 <hr>
                 <div class="row mx-auto">
                     <div class="col-md-6 mt-1">
-                        <a href="https://twitter.com/wonolgy">
+                        <a href="#">
                             <div class="card card-link">
                                 <div class="card-body">
                                     <h5 class="card-title"><i class="fa fa-twitter" aria-hidden="true"></i></h5>
@@ -58,7 +60,7 @@
                         </a>
                     </div>
                     <div class="col-md-6 mt-1">
-                        <a href="https://www.instagram.com/oleksandr_rapiy">
+                        <a href="#">
                             <div class="card card-link">
                                 <div class="card-body">
                                     <h5 class="card-title"><i class="fa fa-instagram" aria-hidden="true"></i></h5>

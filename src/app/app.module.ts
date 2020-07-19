@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule} from '@angular/forms'
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire'
 import { AngularFirestoreModule } from '@angular/fire/firestore'
@@ -12,6 +13,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { environment } from 'src/environments/environment.prod';
+import { AddArticleComponent } from './components/add-article/add-article.component';
 
 
 
@@ -23,14 +25,16 @@ import { environment } from 'src/environments/environment.prod';
     FooterComponent,
     NotFoundComponent,
     ArticlesComponent,
-    AddPostComponent
+    AddPostComponent,
+    AddArticleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

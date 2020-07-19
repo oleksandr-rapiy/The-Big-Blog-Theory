@@ -8,7 +8,10 @@ import { Article } from '../../models/Article'
 })
 export class DashboardComponent implements OnInit {
 
-  article: Article;
+  article: Article = {
+    title: '', 
+    body: ''
+  };
   constructor(
     private articleService: ArticleService
   ) { }

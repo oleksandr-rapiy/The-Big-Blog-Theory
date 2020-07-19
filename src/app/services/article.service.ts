@@ -12,7 +12,6 @@ export class ArticleService {
   private articlesCollection: AngularFirestoreCollection<Article>
   private articleDoc: AngularFirestoreDocument<Article>
   private articles: Observable<Article[]>
-  private newestArticle: Observable<Article>
 
   constructor(
     private angularFirestore: AngularFirestore
@@ -28,6 +27,7 @@ export class ArticleService {
       map(action => action.map(a => {
         const data = a.payload.doc.data() as Article;
         data.id = a.payload.doc.id;
+        data.date = data.date.toDate()
         return data;
       }))
     );
@@ -39,5 +39,15 @@ export class ArticleService {
     return this.articles.pipe(map(articles => {
       return articles[0];
     }))
+  }
+
+  addArticle(article: Article) {
+    this.articlesCollection.add(article);
+  }
+
+
+  removeArticle(article: Article) {
+    this.articleDoc = this.angularFirestore.doc(`articles/${article.id}`);
+    this.articleDoc.delete();
   }
 }

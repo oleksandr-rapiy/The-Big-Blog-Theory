@@ -13,6 +13,7 @@ import { ArticleService } from 'src/app/services/article.service';
 export class ArticlesComponent implements OnInit {
 
   articles: Article[];
+  showAddArticleForm: boolean = false;
   constructor(
     private articleService: ArticleService
   ) { }
@@ -21,6 +22,10 @@ export class ArticlesComponent implements OnInit {
     this.articleService.getArticles().subscribe(articles => {
       this.articles = articles;
     })
+  }
+
+  removeArticle(article: Article) {
+    this.articleService.removeArticle(article);
   }
 
 }
