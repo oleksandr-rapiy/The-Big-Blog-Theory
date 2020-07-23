@@ -5,14 +5,20 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="my-nav" class="collapse navbar-collapse">
-            <ul class="navbar-nav  ml-auto">
+        <div id="my-nav" class="collapse navbar-collapse text-center">
+            <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
                 <li class="nav-item ">
-                    <a class="nav-link" [routerLink]="['/articles']"  routerLinkActive="router-link-active"  >Articles</a>
+                    <a class="nav-link" [routerLink]="['/articles']"  routerLinkActive="router-link-active" >Articles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Patreon</a>
+                    <a class="nav-link" href="#">{{ displayName }}</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" (click)="signOut()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+               
             </ul>
         </div>
     </div>

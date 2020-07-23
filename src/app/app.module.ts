@@ -11,9 +11,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ArticlesComponent } from './components/articles/articles.component';
-import { AddPostComponent } from './components/add-post/add-post.component';
 import { environment } from 'src/environments/environment.prod';
 import { AddArticleComponent } from './components/add-article/add-article.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -25,8 +25,8 @@ import { AddArticleComponent } from './components/add-article/add-article.compon
     FooterComponent,
     NotFoundComponent,
     ArticlesComponent,
-    AddPostComponent,
-    AddArticleComponent
+    AddArticleComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@ export class ArticleService {
   constructor(
     private angularFirestore: AngularFirestore
   ) {
-    this.articlesCollection = this.angularFirestore.collection('articles', ref => ref.orderBy('date', 'asc'));
+    this.articlesCollection = this.angularFirestore.collection('articles');
 
     this.articles = this.getArticles();
   }

@@ -1,26 +1,28 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-6"></div>
-        <div class="col-md-6 text-right">
-            <button class="btn btn-outline-success m-2" (click)="showAddArticleForm = !showAddArticleForm"
-                type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+    <div *ngIf="isAdmin">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 text-right">
+                <button class="btn btn-outline-success m-2" (click)="showAddArticleForm = !showAddArticleForm"
+                    type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
         </div>
-    </div>
-    <div class="row" *ngIf="showAddArticleForm">
-        <div class="col">
-            <app-add-article></app-add-article>
+        <div class="row" *ngIf="showAddArticleForm">
+            <div class="col">
+                <app-add-article></app-add-article>
+            </div>
         </div>
     </div>
     <div class="card m-2" *ngFor="let article of articles">
         <div class="card-body">
             <h5 class="card-title text-center">{{ article.title }}
-                <button class="btn btn-outline-success m-0 float-right" (click)="removeArticle(article)"
+                <button class="btn btn-outline-success m-0 float-right" *ngIf="isAdmin" (click)="removeArticle(article)"
                     type="button"><i class="fa fa-times" aria-hidden="true"></i></button>
             </h5>
             <p class="card-text">{{ article.body }}</p>
         </div>
         <div class="card-footer text-center">
-            {{ article.date | date: 'dd-MM-yyyy'}}
+            {{ article.date | date: 'dd-MM-yyyy hh:mm'}}
         </div>
     </div>
 </div>
