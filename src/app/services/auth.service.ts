@@ -2,12 +2,10 @@ import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Observable, observable, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { User } from '../models/User'
-import { Roles } from '../models/Roles'
 import { Router } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
-import { auth } from 'firebase';
 
 
 @Injectable({

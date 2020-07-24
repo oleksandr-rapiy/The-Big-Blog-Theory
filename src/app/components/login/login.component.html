@@ -1,7 +1,11 @@
 <div class="container">
-    <div *ngIf="!(authService.user | async)" class="mt-3 text-center">
+    <div *ngIf="!(user)" class="mt-3 text-center">
         <button class="btn btn-lg btn-outline-primary" (click)="logIn()"> 
         <i class="fa fa-google" aria-hidden="true"></i> Login with Google
         </button>
+    </div>
+
+    <div *ngIf="(user)" class="mt-3 text-center text-uppercase">
+        <h4>Now you are sign in system</h4>
     </div>
 </div>

@@ -11,12 +11,16 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  user: User
   constructor(
     public authService: AuthService, 
     private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.authService.user.subscribe(user => {
+      this.user = user;
+    })
   }
 
   logIn() {

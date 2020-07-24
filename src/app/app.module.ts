@@ -14,6 +14,7 @@ import { ArticlesComponent } from './components/articles/articles.component';
 import { environment } from 'src/environments/environment.prod';
 import { AddArticleComponent } from './components/add-article/add-article.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 
@@ -26,7 +27,8 @@ import { LoginComponent } from './components/login/login.component';
     NotFoundComponent,
     ArticlesComponent,
     AddArticleComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
